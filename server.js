@@ -109,7 +109,7 @@ io.sockets.on('connection', function (client) {
     });
 
     // tell client about stun and turn servers and generate nonces
-    client.emit('stunservers', config.stunservers || []);
+    //client.emit('stunservers', config.stunservers || []);
 
     // create shared secret nonces for TURN authentication
     // the process is described in draft-uberti-behave-turn-rest
@@ -125,7 +125,7 @@ io.sockets.on('connection', function (client) {
             url: server.url
         });
     });
-    client.emit('turnservers', credentials);
+    //client.emit('turnservers', credentials);
 });
 
 if (config.uid) process.setuid(config.uid);
